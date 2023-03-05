@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Contexts\" />
+    <None Remove="Repositories\" />
+    <None Remove="Repositories\Abstract\" />
+    <None Remove="Repositories\Concrete\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Contexts\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Repositories\Abstract\" />
+    <Folder Include="Repositories\Concrete\" />
+  </ItemGroup>
+</Project>

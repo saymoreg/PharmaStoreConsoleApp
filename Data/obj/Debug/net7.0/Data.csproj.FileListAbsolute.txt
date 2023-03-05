@@ -1,0 +1,15 @@
+/Users/seymurguliyev/Desktop/Projects/DrugStoreApp/Data/bin/Debug/net7.0/Data.deps.json
+/Users/seymurguliyev/Desktop/Projects/DrugStoreApp/Data/bin/Debug/net7.0/Data.dll
+/Users/seymurguliyev/Desktop/Projects/DrugStoreApp/Data/bin/Debug/net7.0/Data.pdb
+/Users/seymurguliyev/Desktop/Projects/DrugStoreApp/Data/bin/Debug/net7.0/Core.dll
+/Users/seymurguliyev/Desktop/Projects/DrugStoreApp/Data/bin/Debug/net7.0/Core.pdb
+/Users/seymurguliyev/Desktop/Projects/DrugStoreApp/Data/obj/Debug/net7.0/Data.csproj.AssemblyReference.cache
+/Users/seymurguliyev/Desktop/Projects/DrugStoreApp/Data/obj/Debug/net7.0/Data.GeneratedMSBuildEditorConfig.editorconfig
+/Users/seymurguliyev/Desktop/Projects/DrugStoreApp/Data/obj/Debug/net7.0/Data.AssemblyInfoInputs.cache
+/Users/seymurguliyev/Desktop/Projects/DrugStoreApp/Data/obj/Debug/net7.0/Data.AssemblyInfo.cs
+/Users/seymurguliyev/Desktop/Projects/DrugStoreApp/Data/obj/Debug/net7.0/Data.csproj.CoreCompileInputs.cache
+/Users/seymurguliyev/Desktop/Projects/DrugStoreApp/Data/obj/Debug/net7.0/Data.csproj.CopyComplete
+/Users/seymurguliyev/Desktop/Projects/DrugStoreApp/Data/obj/Debug/net7.0/Data.dll
+/Users/seymurguliyev/Desktop/Projects/DrugStoreApp/Data/obj/Debug/net7.0/refint/Data.dll
+/Users/seymurguliyev/Desktop/Projects/DrugStoreApp/Data/obj/Debug/net7.0/Data.pdb
+/Users/seymurguliyev/Desktop/Projects/DrugStoreApp/Data/obj/Debug/net7.0/ref/Data.dll

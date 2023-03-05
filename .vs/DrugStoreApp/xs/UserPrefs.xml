@@ -1,0 +1,60 @@
+﻿<Properties StartupConfiguration="{C392D4E5-6F74-4DA0-A6DF-1D79F41BB7F9}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Presentation/Program.cs">
+    <Files>
+      <File FileName="Presentation/Program.cs" Line="228" Column="62" />
+      <File FileName="Presentation/Services/OwnerService.cs" />
+      <File FileName="Data/Contexts/DbContext.cs" />
+      <File FileName="Data/Repositories/Concrete/AdminRepository.cs" />
+      <File FileName="Presentation/Services/AdminService.cs" />
+      <File FileName="Data/Repositories/Abstract/IAdminRepository.cs" />
+      <File FileName="Core/Entities/Admin.cs" />
+      <File FileName="Data/Repositories/DbInitiliazer.cs" />
+      <File FileName="Presentation/Services/DruggistService.cs" Line="285" Column="33" />
+      <File FileName="Data/Repositories/Concrete/DruggistRepository.cs" />
+      <File FileName="Presentation/Services/DrugstoreService.cs" Line="211" Column="49" />
+      <File FileName="Data/Repositories/Concrete/DrugstoreRepository.cs" />
+      <File FileName="Core/Entities/Drugstore.cs" />
+      <File FileName="Presentation/Services/DrugService.cs" Line="66" Column="1" />
+      <File FileName="Data/Repositories/Concrete/DrugRepository.cs" />
+      <File FileName="Core/Entities/Owner.cs" />
+      <File FileName="Core/Constants/OwnerOptions.cs" />
+      <File FileName="Data/Repositories/Concrete/OwnerRepository.cs" />
+      <File FileName="Data/Repositories/Abstract/IRepository.cs" />
+      <File FileName="Data/Repositories/Abstract/IOwnerRepository.cs" />
+      <File FileName="Data/Repositories/Abstract/IDrugstoreRepository.cs" />
+      <File FileName="Data/Repositories/Abstract/IDrugRepository.cs" />
+      <File FileName="Data/Repositories/Abstract/IDruggistRepository.cs" />
+      <File FileName="Core/Entities/Drug.cs" />
+      <File FileName="Core/Entities/BaseEntity.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="DrugStoreApp" expanded="True">
+            <Node name="Core" expanded="True">
+              <Node name="Constants" expanded="True" />
+              <Node name="Entities" expanded="True" />
+            </Node>
+            <Node name="Data" expanded="True">
+              <Node name="Contexts" expanded="True" />
+              <Node name="Repositories" expanded="True">
+                <Node name="Concrete" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="Presentation" expanded="True">
+              <Node name="Services" expanded="True" />
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Presentation PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
