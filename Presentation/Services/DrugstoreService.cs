@@ -261,6 +261,130 @@ namespace Presentation.Services
 
             ConsoleHelper.WriteWithColor("Drugstore Has Been Succesfuly Deleted", ConsoleColor.Green);
         }
+
+        public void Sale()
+        {
+        SaleDesc: if (_drugRepository.GetAll().Count != 0)
+            {
+                ConsoleHelper.WriteWithColor("-- All Drugs ---", ConsoleColor.Blue);
+                var drugs = _drugRepository.GetAll();
+                foreach (var drug in drugs)
+                {
+                    ConsoleHelper.WriteWithColor($"Name: {drug.Name}, ID: {drug.Id} Price: {drug.Price}, Count: {drug.Count},DrugStore Name: {drug.Drugstore.Name}", ConsoleColor.Cyan);
+                }
+
+            ////////////////////////////////////////////////////////////////
+
+            DrugidDesc: ConsoleHelper.WriteWithColor("--- Enter Drug's ID You Want To Sell ---", ConsoleColor.DarkCyan);
+                int drugId;
+                bool issucceeded = int.TryParse(Console.ReadLine(), out drugId);
+                if (!issucceeded)
+                {
+                    ConsoleHelper.WriteWithColor("Invalid ID Format", ConsoleColor.Red);
+                    goto DrugidDesc;
+                }
+
+                ////////////////////////////////////////////////////////////////
+
+                var saleDrug = _drugRepository.GetById(drugId);
+                if (saleDrug is null)
+                {
+                    ConsoleHelper.WriteWithColor("We Can't Find Any Drug By This ID....", ConsoleColor.Red);
+                    goto DrugidDesc;
+                }
+
+                ////////////////////////////////////////////////////////////////
+
+                if (saleDrug.Count != 0)
+                {
+
+
+                    ConsoleHelper.WriteWithColor("--- Enter The Quantity Of Drugs You Want To Sell ---", ConsoleColor.DarkCyan;
+                    int quantity;
+                    issucceeded = int.TryParse(Console.ReadLine(), out quantity);
+                    if (!issucceeded)
+                    {
+                        ConsoleHelper.WriteWithColor("Invalid Quantity Format....", ConsoleColor.Red);
+                        goto DrugidDesc;
+                    }
+
+                    ////////////////////////////////////////////////////////////////
+
+                    if (quantity <= 0)
+                    {
+                        ConsoleHelper.WriteWithColor("Quantity Can't Be Less Than Or Equal 0....", ConsoleColor.Red);
+                        goto DrugidDesc;
+                    }
+
+                    ////////////////////////////////////////////////////////////////
+
+                    if (quantity < saleDrug.Count && quantity == 1)
+                    {
+                        var commonPrice = saleDrug.Price * quantity;
+                        saleDrug.Count -= quantity;
+                        ConsoleHelper.WriteWithColor($"{quantity} Drug(s) Is/Are Sold. Common Price Is {commonPrice}", ConsoleColor.Green);
+                    }
+
+                    ////////////////////////////////////////////////////////////////
+
+                    if (quantity < saleDrug.Count && quantity != 1)
+                    {
+                        var commonPrice = saleDrug.Price * quantity;
+                        saleDrug.Count -= quantity;
+                        ConsoleHelper.WriteWithColor($"{quantity} drug(s) Is/Are Sold. Common Price Is {commonPrice}", ConsoleColor.Green);
+                    }
+
+                    ////////////////////////////////////////////////////////////////
+
+                    if (quantity > saleDrug.Count)
+                    {
+                    SelectionDescription: ConsoleHelper.WriteWithColor($"We Have Only {saleDrug.Count} Drugs. Do You Want To Get Them? 1-YES, 2-NO", ConsoleColor.Red);
+                        int selection;
+                        issucceeded = int.TryParse(Console.ReadLine(), out selection);
+                        if (!issucceeded)
+                        {
+                            ConsoleHelper.WriteWithColor("Invalid Selection Format....", ConsoleColor.Red);
+                            goto SelectionDescription;
+                        }
+
+                        ////////////////////////////////////////////////////////////////
+
+                        if (!(selection == 1 || selection == 2))
+                        {
+                            ConsoleHelper.WriteWithColor("Invalid Selection Option....", ConsoleColor.Red);
+                            goto SelectionDescription;
+                        }
+
+                        ////////////////////////////////////////////////////////////////
+
+                        if (selection == 1)
+                        {
+                            var commonPrice = saleDrug.Price * saleDrug.Count;
+                            ConsoleHelper.WriteWithColor($"All Selected Drugs Have Been Sold. Common Price Is {commonPrice}", ConsoleColor.Green);
+
+                            saleDrug.Count = 0; // to set the count of drugs to zero, because all of them were sold
+                        }
+                        else if (selection == 2)
+                        {
+                            goto SaleDesc;
+                        }
+                    }
+
+                    ////////////////////////////////////////////////////////////////
+
+                    if (quantity == saleDrug.Count)
+                    {
+                        saleDrug.Count = 0;
+                        var commonPrice = saleDrug.Price * quantity;
+                        ConsoleHelper.WriteWithColor($"All Drugs Have Been Sold. Common Price Is {commonPrice}", ConsoleColor.Green);
+                    }
+
+                    ////////////////////////////////////////////////////////////////
+                }
+                ConsoleHelper.WriteWithColor("All Drugs Have Been Sold :(", ConsoleColor.Red);
+            }
+            ConsoleHelper.WriteWithColor("We Can't Find Any Drug To Sell....", ConsoleColor.Red);
+        }
     }
 }
 

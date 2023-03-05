@@ -127,6 +127,7 @@ namespace Presentation
                                                 _drugstoreService.GetAllDrugstoresByOwner();
                                                 break;
                                             case (int)DrugstoreOptions.Sales:
+                                                _drugstoreService.Sale();
                                                 break;
                                             case (int)DrugstoreOptions.BackToMainMenu:
                                                 goto MainMenuDesc;
